@@ -6,7 +6,7 @@ The "Symfony Theatre"
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/phnixdev/theatre/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/phnixdev/theatre/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/1bb8cb9c-d97a-4c48-bdb0-4d52c27248d1/mini.png)](https://insight.sensiolabs.com/projects/1bb8cb9c-d97a-4c48-bdb0-4d52c27248d1)
 
-Welcome to the **Symfony Theatre** - a Symfony based application which serves as
+Welcome to the **Symfony Theatre** - a [Symfony](http://symfony.com) based application which serves as
 a base for your new web applications.
 
 For details on how to download and get started with, see **INSTALL.md** in doc/.
