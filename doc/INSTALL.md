@@ -35,7 +35,8 @@ Installation
                 allow from all
 
                 RewriteEngine On
-                RewriteRule %{REQUEST_FILENAME} !-f
+                RewriteCond %{REQUEST_FILENAME} -f
+                RewriteRule ^ - [L]
                 RewriteRule ^(.*)$ app.php [QSA,L]
             </Directory>
         </VirtualHost>
