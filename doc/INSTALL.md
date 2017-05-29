@@ -20,3 +20,24 @@ Installation
     if you're on production, on you developing machine use:
     
         composer install
+
+- Setup your Webserver, at the momemnt Apache is prefered:
+
+        <VirtualHost *:80>
+            DocumentRoot /your/path/to/theatre/web
+            ServerName  theatre.dev
+            ServerAlias theatre.test
+            ServerAlias theatre.prod
+
+            <Directory your/path/to/theatre/web>
+                AllowOverride All
+                Order allow,deny
+                allow from all
+
+                RewriteEngine On
+                RewriteRule %{REQUEST_FILENAME} !-f
+                RewriteRule ^(.*)$ app.php [QSA,L]
+            </Directory>
+        </VirtualHost>
+
+    **This is just a template and not for production use.**
