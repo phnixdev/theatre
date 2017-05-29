@@ -1,0 +1,17 @@
+default:
+    extensions:
+        Behat\MinkExtension:
+            base_url: http://theatre.test/
+            sessions:
+                goutte:
+                    goutte: ~
+                symfony2:
+                    symfony2: ~
+        Behat\Symfony2Extension:
+            kernel:
+                class: "\\App\\AppKernel"
+    suites:
+        default:
+            contexts: [Behat\MinkExtension\Context\MinkContext]
+            path: "%paths.base%/features"
+            mink_session: symfony2
