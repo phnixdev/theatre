@@ -12,8 +12,14 @@
 namespace App;
 
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
+use Knp\Bundle\MenuBundle\KnpMenuBundle;
+use Maba\Bundle\WebpackBundle\MabaWebpackBundle;
 use Sensio\Bundle\DistributionBundle\SensioDistributionBundle;
 use Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle;
+use Sonata\AdminBundle\SonataAdminBundle;
+use Sonata\BlockBundle\SonataBlockBundle;
+use Sonata\CoreBundle\SonataCoreBundle;
+use Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle;
 use Symfony\Bundle\DebugBundle\DebugBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\MonologBundle\MonologBundle;
@@ -23,6 +29,7 @@ use Symfony\Bundle\TwigBundle\TwigBundle;
 use Symfony\Bundle\WebProfilerBundle\WebProfilerBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
+use Theatre\Bundle\AdminBundle\TheatreAdminBundle;
 
 class AppKernel extends Kernel
 {
@@ -36,6 +43,18 @@ class AppKernel extends Kernel
             new SensioFrameworkExtraBundle(),
             new SwiftmailerBundle(),
             new TwigBundle(),
+
+            new MabaWebpackBundle(),
+
+            new SonataCoreBundle(),
+            new SonataBlockBundle(),
+
+            new KnpMenuBundle(),
+
+            new SonataDoctrineORMAdminBundle(),
+            new SonataAdminBundle(),
+
+            new TheatreAdminBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
