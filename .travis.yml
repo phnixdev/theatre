@@ -7,7 +7,7 @@ php:
     - 7.1
 
 node_js:
-    - 6
+    - 7
 
 sudo: false
 
@@ -18,9 +18,11 @@ cache:
         - node_modules
         - vendor
 
+before_install:
+    - yarn install
+
 install:
     - composer install --no-interaction
-    - yarn install
     - bin/console maba:webpack:compile --env test
 
 script:
