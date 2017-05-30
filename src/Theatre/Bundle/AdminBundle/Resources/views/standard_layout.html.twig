@@ -1,0 +1,23 @@
+{% extends 'SonataAdminBundle::standard_layout.html.twig' %}
+
+{% block stylesheets %}
+    {% webpack css '@TheatreAdminBundle/Resources/assets/loader.js' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% end_webpack %}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ webpack_asset('@TheatreAdminBundle/Resources/assets/loader.js') }}"></script>
+{% endblock %}
+
+{% block logo %}
+    {% spaceless %}
+        <a class="logo" href="{{ path('sonata_admin_dashboard') }}">
+            <span>{{ sonata_admin.adminPool.title }}</span>
+        </a>
+    {% endspaceless %}
+{% endblock %}
+
+{% block side_bar_after_nav_content %}
+    <a href="https://github.com/phnixdev/theatre" rel="noreferrer" target="_blank">Symfony Theatre</a>
+{% endblock %}

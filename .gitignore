@@ -1,5 +1,6 @@
 /app/config/parameters.yml
 /build/
+/node_modules/
 /var/*
 !/var/cache
 /var/cache/*
@@ -11,3 +12,4 @@
 /var/sessions/*
 !/var/sessions/.gitkeep
 /vendor/
+/web/compiled/
